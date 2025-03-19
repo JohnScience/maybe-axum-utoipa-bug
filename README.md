@@ -131,4 +131,4 @@ There is presumably unnecessary redundancy because `MyQueryParams` appears both 
 
 ## Fundamental solution
 
-Maybe, [`utoipa`](https://crates.io/crates/utoipa) (with the `axum_extra` feature) should infer the query parameters.
+Maybe, [`utoipa`](https://crates.io/crates/utoipa) (with the `axum_extra` feature) should infer the query parameters. The attribute macro [`utoipa::path`](https://docs.rs/utoipa/latest/utoipa/attr.path.html) should be able to identify the types of arguments with the type [`axum::extract::Query<...>`](https://docs.rs/axum/latest/axum/extract/struct.Query.html).
