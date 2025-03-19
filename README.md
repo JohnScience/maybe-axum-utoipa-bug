@@ -1,5 +1,7 @@
 # I just want to have query parameters in the OpenAPI spec
 
+**Status**: resolved. RTFM.
+
 I use [`openapi`](https://www.npmjs.com/package/openapi) NPM package for the purpose of generation of JavaScript client code and TypeScript type definitions from the OpenAPI spec,
 which in turn is generated from the `ApiDoc` structure with `utoipa::OpenApi` derive.
 
@@ -110,3 +112,23 @@ At this point, I start suspecting that the undesired behavior is caused by a bug
 
 * [`utoipa`](https://crates.io/crates/utoipa) (with the `axum_extra` feature),
 * [`utoipauto`](https://crates.io/crates/utoipauto).
+
+## Workaround solution
+
+Just add
+
+```rust
+#[utoipa::path(
+  params(
+        MyQueryParams
+  ),
+)]
+```
+
+## Source of problem
+
+There is presumably unnecessary redundancy because `MyQueryParams` appears both in the `Query<...>` and in the `params(...)`.
+
+## Fundamental solution
+
+Maybe, [`utoipa`](https://crates.io/crates/utoipa) (with the `axum_extra` feature) should infer the query parameters.
