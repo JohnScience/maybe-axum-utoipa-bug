@@ -1,0 +1,32 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "maybe-axum-utoipa-bug",
+    "description": "My Api description",
+    "license": {
+      "name": ""
+    },
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/hello-with-name": {
+      "get": {
+        "tags": [
+          "crate"
+        ],
+        "operationId": "hello_with_name",
+        "responses": {}
+      }
+    },
+    "/hello-world": {
+      "get": {
+        "tags": [
+          "crate"
+        ],
+        "operationId": "hello_world",
+        "responses": {}
+      }
+    }
+  },
+  "components": {}
+}
