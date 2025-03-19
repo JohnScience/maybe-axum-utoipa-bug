@@ -27,7 +27,7 @@ pub fn generate_openapi_spec() {
 
 Without [`utoipauto`](https://crates.io/crates/utoipauto), I would have to manually add all [DTO](https://learn.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-5)s and endpoints.
 
-When I run the code above, I get the following output of `openapi-spec.json`
+When I run the code in [`src/main.rs`](https://github.com/JohnScience/maybe-axum-utoipa-bug/blob/main/src/main.rs), I get the following output of `openapi-spec.json`
 
 ```json
 {
