@@ -104,6 +104,8 @@ I would like to see
 }
 ```
 
+*Note: notice the new `"parameters"` property*.
+
 At this point, I start suspecting that the undesired behavior is caused by a bug in one of the libraries
 
 * [`utoipa`](https://crates.io/crates/utoipa) (with the `axum_extra` feature),
